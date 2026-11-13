@@ -19,8 +19,8 @@ plt.rcParams.update({
     "axes.grid": True, "grid.color": LIGHT, "grid.linewidth": 0.8, "axes.axisbelow": True,
 })
 
-DELAY_BINS = [-np.inf, -8, -1, 0, 3, 7, np.inf]
-DELAY_LABELS = ["Awal >7 hari", "Awal 1-7 hari", "Hari estimasi", "Telat 1-3 hari", "Telat 4-7 hari", "Telat >7 hari"]
+DELAY_BINS = [-np.inf, -8, -1, 0, 1, 3, 7, np.inf]
+DELAY_LABELS = ["Awal >7 hari", "Awal 1-7 hari", "Hari estimasi", "Telat 1 hari", "Telat 2-3 hari", "Telat 4-7 hari", "Telat >7 hari"]
 SEGMENT_ORDER = ["New High-Value", "Dormant High-Value", "Cooling Down", "New Customers", "Lost / Low-Value", "Repeat Buyers"]
 SEGMENT_ACTION = {
     "New High-Value": "Dorong pembelian kedua dalam 90 hari pertama",
@@ -215,8 +215,8 @@ with tab2:
         worst = (f" State dengan keterlambatan tertinggi adalah {late_state.index[0]} ({late_state['late_rate'].iloc[0]:.1f}%)."
                  if not late_state.empty else "")
         by_bin = dict(zip(labels, ds["avg"]))
-        drop = (f" Skor turun dari {by_bin['Hari estimasi']:.2f} pada hari estimasi menjadi {by_bin['Telat 1-3 hari']:.2f} "
-                f"pada keterlambatan 1-3 hari." if {"Hari estimasi", "Telat 1-3 hari"} <= set(by_bin) else "")
+        drop = (f" Skor turun dari {by_bin['Hari estimasi']:.2f} pada hari estimasi menjadi {by_bin['Telat 1 hari']:.2f} "
+                f"pada keterlambatan 1 hari." if {"Hari estimasi", "Telat 1 hari"} <= set(by_bin) else "")
         st.markdown(f"**Temuan.** Pesanan terlambat rata-rata mendapat review **{late:.2f}**, sedangkan pesanan tepat waktu "
                     f"**{on_time:.2f}** (selisih {on_time - late:.2f} poin).{drop}{worst}")
 

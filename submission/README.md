@@ -2,9 +2,9 @@
 
 Proyek akhir kelas **Belajar Fundamental Analisis Data** (Dicoding). Analisis memakai data transaksi marketplace Olist (Brasil) pada periode **Januari 2017 - Agustus 2018** untuk menjawab tiga pertanyaan bisnis:
 
-1. Kategori produk apa yang menghasilkan revenue terbesar dan bagaimana pertumbuhannya (Jan-Agu 2018 vs Jan-Agu 2017)?
-2. Berapa persen pesanan yang terlambat, bagaimana dampaknya pada review score, dan state mana dengan keterlambatan tertinggi?
-3. Bagaimana segmentasi pelanggan berdasarkan RFM dan segmen mana yang paling layak diprioritaskan untuk retensi?
+1. 10 kategori produk apa yang menghasilkan revenue terbesar, berapa persen kontribusi dan pertumbuhan masing-masing (Jan-Agu 2018 vs Jan-Agu 2017), sebagai dasar penentuan kategori prioritas untuk alokasi stok dan anggaran promosi?
+2. Berapa persen pesanan yang tiba setelah tanggal estimasi, berapa selisih rata-rata review antara pesanan tepat waktu dan terlambat, dan 5 state mana (minimal 300 pesanan) dengan keterlambatan tertinggi, sebagai dasar penentuan wilayah prioritas evaluasi logistik?
+3. Berapa persen pelanggan dan persen revenue dari setiap segmen RFM, sebagai dasar pemilihan segmen target dan insentif kampanye retensi?
 
 Teknik analisis lanjutan: **RFM Analysis**, **Geospatial Analysis**, dan **Binning / Manual Grouping** (tanpa algoritma machine learning).
 
